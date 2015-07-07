@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="L4B-Dk-x7b">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Navigation Controller-->
+        <scene sceneID="pDT-rX-SUC">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <navigationController id="L4B-Dk-x7b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zbY-ka-wEh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ct8-0t-iTd" kind="relationship" relationship="rootViewController" id="Szd-Ye-Qav"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRS-4Y-UGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-697" y="390"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="QaS-uO-FFy">
+            <objects>
+                <viewController id="Ct8-0t-iTd" customClass="SignInViewController" customModule="CaptionMySocialPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GKj-MZ-sgu"/>
+                        <viewControllerLayoutGuide type="bottom" id="UIE-X5-Dqh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H9g-oZ-ZGr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8K-l5-Khj">
+                                <rect key="frame" x="10" y="84" width="580" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ImD-GT-96s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAX-8j-SHI">
+                                <rect key="frame" x="277" y="125" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NKr-sx-LMR"/>
+                                    <constraint firstAttribute="width" constant="46" id="WTh-7j-kq6"/>
+                                </constraints>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterTapped:" destination="Ct8-0t-iTd" eventType="touchUpInside" id="con-f2-2xz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a8K-l5-Khj" firstAttribute="top" secondItem="GKj-MZ-sgu" secondAttribute="bottom" constant="20" id="I9I-eC-2v3"/>
+                            <constraint firstAttribute="centerX" secondItem="PAX-8j-SHI" secondAttribute="centerX" id="ICO-Tf-l9b"/>
+                            <constraint firstItem="a8K-l5-Khj" firstAttribute="leading" secondItem="H9g-oZ-ZGr" secondAttribute="leading" constant="10" id="fTT-OO-RNa"/>
+                            <constraint firstItem="PAX-8j-SHI" firstAttribute="top" secondItem="a8K-l5-Khj" secondAttribute="bottom" constant="20" id="mUW-4N-Tts"/>
+                            <constraint firstAttribute="centerX" secondItem="a8K-l5-Khj" secondAttribute="centerX" id="pYk-HU-4Ul"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bgt-zh-ucp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rel-S2-3dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="390"/>
         </scene>
     </scenes>
 </document>
