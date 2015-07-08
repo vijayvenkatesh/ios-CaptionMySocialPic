@@ -155,6 +155,17 @@
                             <constraint firstItem="fL7-v6-ihG" firstAttribute="top" secondItem="eeE-N6-Gpw" secondAttribute="bottom" constant="20" id="Zqs-1d-hRv"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="nNp-R7-tg1"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="xS5-p6-JGD">
+                        <barButtonItem key="rightBarButtonItem" title="Update Pic" id="bGb-Cc-X78">
+                            <connections>
+                                <action selector="updateTapped:" destination="pNr-hW-a8I" id="KuU-Zg-dGY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="profilePicImageView" destination="fL7-v6-ihG" id="jV5-TJ-0qa"/>
                     </connections>

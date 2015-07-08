@@ -11,6 +11,7 @@ import Accounts
 import Social
 
 class SignInViewController: UIViewController {
+    var twitterAccount : ACAccount? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class SignInViewController: UIViewController {
                 if allAccounts.count > 0 {
                     //If at least one account exists
                     let twitterAccount = allAccounts.last as! ACAccount
+                    self.twitterAccount = twitterAccount
 
                     let requestAPI = NSURL(string: "https://api.twitter.com/1.1/account/verify_credentials.json")
                     let userRequest = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: requestAPI, parameters: nil)
@@ -72,6 +74,7 @@ class SignInViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let addTextViewController = segue.destinationViewController as! AddTextViewController
         addTextViewController.profileImage = (sender as! UIImage)
+        addTextViewController.twitterAccount = self.twitterAccount
     }
     
 
