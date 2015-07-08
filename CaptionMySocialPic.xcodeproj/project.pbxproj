@@ -16,6 +16,7 @@
 		B125E95B1B4C1D9700FA9C97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125E95A1B4C1D9700FA9C97 /* SignInViewController.swift */; };
 		B14A77611B4C940D0007FB6C /* AddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A77601B4C940D0007FB6C /* AddTextViewController.swift */; };
 		B14A77631B4C976C0007FB6C /* PublishPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A77621B4C976C0007FB6C /* PublishPicViewController.swift */; };
+		B14A77651B4DCCC30007FB6C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B14A77641B4DCCC30007FB6C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		B125E95A1B4C1D9700FA9C97 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		B14A77601B4C940D0007FB6C /* AddTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextViewController.swift; sourceTree = "<group>"; };
 		B14A77621B4C976C0007FB6C /* PublishPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishPicViewController.swift; sourceTree = "<group>"; };
+		B14A77641B4DCCC30007FB6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		B125E9291B4C144D00FA9C97 = {
 			isa = PBXGroup;
 			children = (
+				B14A77641B4DCCC30007FB6C /* README.md */,
 				B125E9341B4C144D00FA9C97 /* CaptionMySocialPic */,
 				B125E94D1B4C144D00FA9C97 /* CaptionMySocialPicTests */,
 				B125E9331B4C144D00FA9C97 /* Products */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14A77651B4DCCC30007FB6C /* README.md in Sources */,
 				B125E93B1B4C144D00FA9C97 /* CaptionMySocialPic.xcdatamodeld in Sources */,
 				B125E9381B4C144D00FA9C97 /* AppDelegate.swift in Sources */,
 				B14A77631B4C976C0007FB6C /* PublishPicViewController.swift in Sources */,
