@@ -14,6 +14,8 @@
 		B125E9451B4C144D00FA9C97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B125E9431B4C144D00FA9C97 /* LaunchScreen.xib */; };
 		B125E9511B4C144D00FA9C97 /* CaptionMySocialPicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125E9501B4C144D00FA9C97 /* CaptionMySocialPicTests.swift */; };
 		B125E95B1B4C1D9700FA9C97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125E95A1B4C1D9700FA9C97 /* SignInViewController.swift */; };
+		B14A77611B4C940D0007FB6C /* AddTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A77601B4C940D0007FB6C /* AddTextViewController.swift */; };
+		B14A77631B4C976C0007FB6C /* PublishPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A77621B4C976C0007FB6C /* PublishPicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		B125E94F1B4C144D00FA9C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B125E9501B4C144D00FA9C97 /* CaptionMySocialPicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionMySocialPicTests.swift; sourceTree = "<group>"; };
 		B125E95A1B4C1D9700FA9C97 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B14A77601B4C940D0007FB6C /* AddTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextViewController.swift; sourceTree = "<group>"; };
+		B14A77621B4C976C0007FB6C /* PublishPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishPicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				B125E9391B4C144D00FA9C97 /* CaptionMySocialPic.xcdatamodeld */,
 				B125E9351B4C144D00FA9C97 /* Supporting Files */,
 				B125E95A1B4C1D9700FA9C97 /* SignInViewController.swift */,
+				B14A77601B4C940D0007FB6C /* AddTextViewController.swift */,
+				B14A77621B4C976C0007FB6C /* PublishPicViewController.swift */,
 			);
 			path = CaptionMySocialPic;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 			files = (
 				B125E93B1B4C144D00FA9C97 /* CaptionMySocialPic.xcdatamodeld in Sources */,
 				B125E9381B4C144D00FA9C97 /* AppDelegate.swift in Sources */,
+				B14A77631B4C976C0007FB6C /* PublishPicViewController.swift in Sources */,
 				B125E95B1B4C1D9700FA9C97 /* SignInViewController.swift in Sources */,
+				B14A77611B4C940D0007FB6C /* AddTextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +421,7 @@
 				B125E9561B4C144D00FA9C97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B125E9571B4C144D00FA9C97 /* Build configuration list for PBXNativeTarget "CaptionMySocialPicTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				B125E9591B4C144D00FA9C97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

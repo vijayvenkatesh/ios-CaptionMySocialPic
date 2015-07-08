@@ -43,7 +43,23 @@ class SignInViewController: UIViewController {
                         
                         var error = NSErrorPointer()
                         
-                        let responseDictionary = NSJSONSerialization.JSONObjectWithData(response, options: <#NSJSONReadingOptions#>, error: <#NSErrorPointer#>)
+                        let responseDictionary = NSJSONSerialization.JSONObjectWithData(response, options: NSJSONReadingOptions.MutableLeaves, error: error) as! [String: AnyObject]
+                        
+                        var imageURL = responseDictionary["profile_image_url_https"] as! String
+                        //println(imageURL)
+                        
+                        imageURL = imageURL.stringByReplacingOccurrencesOfString("_normal", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        
+                        println (imageURL)
+                        var imageRequest = NSURLRequest(URL: NSURL(string: imageURL)!)
+                        
+                        NSURLConnection.sendAsynchronousRequest(imageRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (imageResponse: NSURLResponse!, imageData: NSData!, imageError:NSError!) -> Void in
+                            var image = UIImage(data: imageData)
+                            
+                            //segue
+                            self.performSegueWithIdentifier("SignInToTextSegue", sender: image)
+                        })
+                        
                     })
                 }
             } else {
@@ -51,6 +67,11 @@ class SignInViewController: UIViewController {
             }
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let addTextViewController = segue.destinationViewController as! AddTextViewController
+        addTextViewController.profileImage = (sender as! UIImage)
     }
     
 

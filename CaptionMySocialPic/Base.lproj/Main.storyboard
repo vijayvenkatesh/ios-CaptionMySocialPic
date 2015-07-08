@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="height" constant="21" id="ImD-GT-96s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAX-8j-SHI">
@@ -65,10 +65,103 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bgt-zh-ucp"/>
+                    <connections>
+                        <segue destination="HNt-q9-Cwv" kind="show" identifier="SignInToTextSegue" id="bTa-k9-Jj7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rel-S2-3dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="390"/>
+            <point key="canvasLocation" x="-3" y="564"/>
+        </scene>
+        <!--Add Text View Controller-->
+        <scene sceneID="EUk-eH-S2x">
+            <objects>
+                <viewController id="HNt-q9-Cwv" customClass="AddTextViewController" customModule="CaptionMySocialPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APT-l9-bWI"/>
+                        <viewControllerLayoutGuide type="bottom" id="6VT-BU-iuE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zBq-cZ-m6A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trR-DB-4il">
+                                <rect key="frame" x="10" y="84" width="580" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kto-or-HGB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pec-et-pph">
+                                <rect key="frame" x="50" y="149" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fS7-zk-gJg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pec-et-pph" secondAttribute="trailing" constant="50" id="0Yd-BW-Lzw"/>
+                            <constraint firstItem="Pec-et-pph" firstAttribute="leading" secondItem="zBq-cZ-m6A" secondAttribute="leading" constant="50" id="GRA-aw-u5Z"/>
+                            <constraint firstItem="trR-DB-4il" firstAttribute="top" secondItem="APT-l9-bWI" secondAttribute="bottom" constant="20" id="Gfy-7X-COs"/>
+                            <constraint firstItem="trR-DB-4il" firstAttribute="leading" secondItem="zBq-cZ-m6A" secondAttribute="leading" constant="10" id="O2w-5z-nan"/>
+                            <constraint firstItem="Pec-et-pph" firstAttribute="top" secondItem="trR-DB-4il" secondAttribute="bottom" constant="44" id="X8v-aM-SbS"/>
+                            <constraint firstAttribute="centerX" secondItem="Pec-et-pph" secondAttribute="centerX" id="o53-hw-wX1"/>
+                            <constraint firstAttribute="trailing" secondItem="trR-DB-4il" secondAttribute="trailing" constant="10" id="peo-be-J9n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLx-nI-DCg">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="wKU-Tf-moJ">
+                            <connections>
+                                <segue destination="pNr-hW-a8I" kind="show" identifier="AddTextToPublishSegue" id="m0b-kj-nmY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="Pec-et-pph" id="2BE-Xf-J3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHk-qr-ohd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="566"/>
+        </scene>
+        <!--Publish Pic View Controller-->
+        <scene sceneID="SgQ-aM-dTQ">
+            <objects>
+                <viewController id="pNr-hW-a8I" customClass="PublishPicViewController" customModule="CaptionMySocialPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eeE-N6-Gpw"/>
+                        <viewControllerLayoutGuide type="bottom" id="U1r-eX-wK2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dkO-mE-z2C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fL7-v6-ihG">
+                                <rect key="frame" x="150" y="84" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="aDi-2S-kJ8"/>
+                                    <constraint firstAttribute="width" constant="300" id="lvz-6t-uhk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fL7-v6-ihG" secondAttribute="centerX" id="Z3A-iz-Zfb"/>
+                            <constraint firstItem="fL7-v6-ihG" firstAttribute="top" secondItem="eeE-N6-Gpw" secondAttribute="bottom" constant="20" id="Zqs-1d-hRv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profilePicImageView" destination="fL7-v6-ihG" id="jV5-TJ-0qa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FK9-Ih-hXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363" y="568"/>
         </scene>
     </scenes>
 </document>
